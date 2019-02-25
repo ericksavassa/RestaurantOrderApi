@@ -1,5 +1,4 @@
-﻿using System;
-namespace RestaurantOrder.Domain.Model
+﻿namespace RestaurantOrder.Domain.Model
 {
     public enum DayTime
     {

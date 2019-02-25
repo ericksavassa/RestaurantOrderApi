@@ -1,6 +1,6 @@
-﻿using System;
+﻿using RestaurantOrder.Domain.Model;
+using System;
 using System.Linq;
-using RestaurantOrder.Domain.Model;
 
 namespace RestaurantOrder.Domain.Services
 {
@@ -17,7 +17,7 @@ namespace RestaurantOrder.Domain.Services
 
             foreach (string uniqueInput in distinctInputs)
             {
-                var result = UtilService.GetEnumName<Morning>(uniqueInput);
+                var result = UtilService.GetEnumName<MorningMeals>(uniqueInput);
 
                 if (uniqueInput.Equals("3"))
                 {

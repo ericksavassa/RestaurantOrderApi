@@ -1,5 +1,4 @@
-﻿using System;
-using RestaurantOrder.Domain.Model;
+﻿using RestaurantOrder.Domain.Model;
 
 namespace RestaurantOrder.Domain.Services
 {

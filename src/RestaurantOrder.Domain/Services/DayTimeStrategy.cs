@@ -1,7 +1,7 @@
-﻿using System;
+﻿using RestaurantOrder.Domain.Model;
+using System;
 using System.Collections.Generic;
 using System.Linq;
-using RestaurantOrder.Domain.Model;
 
 namespace RestaurantOrder.Domain.Services
 {

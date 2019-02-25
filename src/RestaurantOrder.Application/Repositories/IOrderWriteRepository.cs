@@ -5,6 +5,10 @@ namespace RestaurantOrder.Application.Repositories
 {
     public interface IOrderWriteRepository
     {
+        /// <summary>
+        /// Create new order
+        /// </summary>
+        /// <param name="order">The order</param>
         Task Add(Order order);
     }
 }

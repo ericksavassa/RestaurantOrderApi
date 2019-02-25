@@ -1,7 +1,6 @@
-﻿using System;
-namespace RestaurantOrder.Domain.Model
+﻿namespace RestaurantOrder.Domain.Model
 {
-    public enum Night
+    public enum NightMeals
     {
         steak = 1,
         potato = 2,

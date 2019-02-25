@@ -31,15 +31,15 @@ namespace RestaurantOrder.Tests.Domain
         [Fact]
         public void test2()
         {
-            var response = UtilService.GetEnumName<Morning>("2");
+            var response = UtilService.GetEnumName<MorningMeals>("2");
 
-            Assert.Equal(Morning.toast.ToString(), response);
+            Assert.Equal(MorningMeals.toast.ToString(), response);
         }
 
         [Fact]
         public void test3()
         {
-            var response = UtilService.GetEnumName<Morning>("5");
+            var response = UtilService.GetEnumName<MorningMeals>("5");
 
             Assert.Equal("error", response);
         }
