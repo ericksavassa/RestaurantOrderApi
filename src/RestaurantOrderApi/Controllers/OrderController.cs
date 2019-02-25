@@ -1,5 +1,5 @@
 ﻿using Microsoft.AspNetCore.Mvc;
-using RestaurantOrder.Application;
+using RestaurantOrder.Application.Services;
 using RestaurantOrder.Domain.Model;
 using System.Collections.Generic;
 using System.Threading.Tasks;
