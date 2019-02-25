@@ -1,9 +1,8 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
-using Microsoft.AspNetCore.Mvc;
+﻿using Microsoft.AspNetCore.Mvc;
 using RestaurantOrder.Application;
+using RestaurantOrder.Domain.Model;
+using System.Collections.Generic;
+using System.Threading.Tasks;
 
 namespace RestaurantOrder.Api.Controllers
 {
@@ -18,34 +17,21 @@ namespace RestaurantOrder.Api.Controllers
         }
 
         [HttpGet]
-        public IEnumerable<string> Get()
+        public async Task<IEnumerable<Order>> Get()
         {
-            return new string[] { "value1", "value2" };
+            return await _orderService.GetAll();
         }
 
-        // GET api/values/5
         [HttpGet("{input}")]
-        public string Get(string input)
+        public async Task<string> Get(string input)
         {
-            return _orderService.Order(input);
+            return await _orderService.Order(input);
         }
 
-        // POST api/values
         [HttpPost]
-        public void Post([FromBody]string value)
+        public async Task<string> Post([FromBody]string input)
         {
-        }
-
-        // PUT api/values/5
-        [HttpPut("{id}")]
-        public void Put(int id, [FromBody]string value)
-        {
-        }
-
-        // DELETE api/values/5
-        [HttpDelete("{id}")]
-        public void Delete(int id)
-        {
+            return await _orderService.Order(input);
         }
     }
 }

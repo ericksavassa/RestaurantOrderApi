@@ -4,8 +4,7 @@ namespace RestaurantOrder.Domain.Model
 {
     public class Order
     {
-        public int Id { get; set; }
-        public int Input { get; set; }
-        public int Output { get; set; }
+        public string Input { get; set; }
+        public string Output { get; set; }
     }
 }

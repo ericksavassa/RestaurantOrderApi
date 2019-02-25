@@ -1,8 +1,12 @@
-﻿using System;
+﻿using RestaurantOrder.Domain.Model;
+using System.Collections.Generic;
+using System.Threading.Tasks;
+
 namespace RestaurantOrder.Application
 {
     public interface IOrderService
     {
-        string Order(string input);
+        Task<string> Order(string input);
+        Task<IEnumerable<Order>> GetAll();
     }
 }

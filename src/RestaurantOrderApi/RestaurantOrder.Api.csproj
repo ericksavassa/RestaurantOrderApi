@@ -16,5 +16,6 @@
   <ItemGroup>
     <ProjectReference Include="..\RestaurantOrder.Application\RestaurantOrder.Application.csproj" />
     <ProjectReference Include="..\RestaurantOrder.Domain\RestaurantOrder.Domain.csproj" />
+    <ProjectReference Include="..\RestaurantOrder.Infrastructure\RestaurantOrder.Infrastructure.csproj" />
   </ItemGroup>
 </Project>

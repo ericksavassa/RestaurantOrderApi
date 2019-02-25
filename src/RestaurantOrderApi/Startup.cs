@@ -11,7 +11,10 @@ using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Logging;
 using Microsoft.Extensions.Options;
 using RestaurantOrder.Application;
+using RestaurantOrder.Application.Repositories;
 using RestaurantOrder.Domain.Services;
+using RestaurantOrder.Infrastructure.InMemoryDataAccess;
+using RestaurantOrder.Infrastructure.InMemoryDataAccess.Repositories;
 
 namespace RestaurantOrder.Api
 {
@@ -28,16 +31,18 @@ namespace RestaurantOrder.Api
         public void ConfigureServices(IServiceCollection services)
         {
             services.AddMvc().SetCompatibilityVersion(CompatibilityVersion.Version_2_1);
-
-
+                        
             services.AddTransient<IOrderService, OrderService>();
-
-            //services.AddTransient<ICalculateOrderService, MorningService>();
 
             services.AddScoped<IDayTimeStrategy, DayTimeStrategy>();
 
             services.AddScoped<ICalculateOrderService, MorningService>();
             services.AddScoped<ICalculateOrderService, NightService>();
+
+            services.AddScoped<IOrderWriteRepository, OrderRepository>();
+            services.AddScoped<IOrderReadRepository, OrderRepository>();
+
+            services.AddSingleton<Context>();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.

@@ -4,4 +4,8 @@
     <TargetFramework>netcoreapp2.1</TargetFramework>
   </PropertyGroup>
 
+  <ItemGroup>
+    <ProjectReference Include="..\RestaurantOrder.Application\RestaurantOrder.Application.csproj" />
+  </ItemGroup>
+
 </Project>
