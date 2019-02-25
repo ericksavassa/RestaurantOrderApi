@@ -27,11 +27,12 @@ namespace RestaurantOrder.Api.Controllers
         {
             return await _orderService.Order(input);
         }
-
+        
         [HttpPost]
-        public async Task<string> Post([FromBody]string input)
+        public async Task<Order> Post([FromBody]Order order)
         {
-            return await _orderService.Order(input);
+            order.Output = await _orderService.Order(order.Input);
+            return order;
         }
     }
 }
